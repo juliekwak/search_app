@@ -1,5 +1,9 @@
 class PagesController < ApplicationController
 
+  def index
+    @pages = Page.all
+  end
+
   def new
     @page = Page.new
   end
@@ -13,11 +17,11 @@ class PagesController < ApplicationController
     end
   end
 
-  def scrape
+  def show
     @page = Page.find(params[:id])
-
   end
 
+# Scraper::page_create ( ---- calling the page_create method from the scraper.rb Scraper module )
 
 
   private

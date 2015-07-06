@@ -1,7 +1,4 @@
 module Scraper
-
-
-
   def self.create_page
     page = connect.get('http://www.sproutedkitchen.com/recipes/')
     base_url = 'http://www.sproutedkitchen.com'
@@ -9,9 +6,6 @@ module Scraper
     get_recipe_from_url(urls)
 
   end
-
-
-
 
   def self.connect
     Mechanize.new
@@ -34,7 +28,7 @@ module Scraper
       body = find_body(recipe_url)
       title = find_title(recipe_url)
       images = find_images(recipe_url)
-      page = Page.create(title: title, url: recipe_url, body: body, image: images)
+      Page.create(title: title, url: recipe_url, body: body, image: images)
     end
   end
 

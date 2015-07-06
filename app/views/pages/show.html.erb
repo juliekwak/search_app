@@ -1,0 +1,13 @@
+<div class="container">
+
+  <h1><%= @page.title %></h1>
+  <h4><%= link_to @page.url, @page.url %></h4>
+
+  <%= @page.image.each do |image| %>
+    <li><%= image_tag image %></li>
+  <% end %>
+
+  <!-- <%= link_to "Back to Sites homepage", sites_path, class: "btn btn-default" %>
+  <%= link_to "Edit Site", edit_site_path, class: "btn btn-default" %> -->
+
+</div>
