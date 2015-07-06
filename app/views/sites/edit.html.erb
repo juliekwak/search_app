@@ -1,0 +1,12 @@
+<div class="container">
+
+  <h1>Edit <%= @site.name %></h1>
+
+  <%= simple_form_for @site do |f| %>
+    <%= f.input :name, label: "Site Name" %>
+    <%= f.input :url, label: "Site URL" %>
+    <%= f.input :category, label: "Site Category (optional)" %>
+    <%= f.button :submit %>
+  <% end %>
+
+</div>

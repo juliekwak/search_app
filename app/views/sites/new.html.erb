@@ -1,0 +1,12 @@
+<div class="container">
+
+    <h1>Add a new site</h1>
+    <%= simple_form_for @site do |f| %>
+      <%= f.input :name, label: "Site Name" %>
+      <%= f.input :url, label: "Site URL", placeholder: "http://" %>
+      <%= f.input :category, label: "Site Category (optional)" %>
+      <%= f.submit "Add Site".html_safe, class: 'btn btn-lg btn-success' %>
+    <% end %>
+
+
+</div>

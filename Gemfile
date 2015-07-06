@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
 gem 'rails_12factor', group: :production
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'simple_form'
+gem 'mechanize'
+gem 'nokogiri'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -35,6 +40,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'annotate'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
